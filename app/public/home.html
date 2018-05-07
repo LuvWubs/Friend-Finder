@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find a Friend</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>
+        <i class="fa fa-facebook-square"></i>
+        Friend Finder
+      </h1>
+      <h3>Tell us about yourself. Find a friend. Easy as that!</h3>
+      <hr>
+      <a href="/survey"><button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> Take the Survey</button></a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/api/friends">View Friends</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+
+  var questions = [
+    {Q: Can you handle balls of hair in the shower drain?, A: }
+    {Q: Do you enjoy hot-boxing cigarette smoke indoors?, A: }
+    {Q: Are you emotionally co-dependant with you fur-babies?, A: }
+    {Q: Are you emotionally co-dependant with social media?, A: }
+    {Q: Would you prefer romance with your love or a partner-in-crime?, A: }
+    {Q: Do you like to shnuggle?, A: }
+    {Q: Is minimalism or extravagence your preference?, A: }
+    {Q: What is your potential for world domination?, A: }
+    {Q: Are you mature enough to hold onto your money & your liquor?, A: }
+  ]
+
+    $(".button").on("click", function(event) {
+      event.preventDefault();
+      $.get('survey.html', function() {
+        console.log('going to the survey!');
+      })
+
+    });
+  </script>
+</body>
+</html>
